@@ -96,11 +96,13 @@ class SocialLoginViewController:SocialLoginService{
 
     //MARK: - Notification
     func keyboardWillShowNotification(_ notification: Notification) {
+        guard (txtSetFocusField != nil) else {
+            return
+        }
 
         let userInfo = notification.userInfo!
         let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let screenSize: CGSize = UIScreen.main.bounds.size
-
         let txtHeight = txtSetFocusField.frame.origin.y + txtSetFocusField.frame.height + 50.0
         let keyBoardHeight = screenSize.height - keyboardScreenEndFrame.size.height
 
