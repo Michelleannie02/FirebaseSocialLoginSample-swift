@@ -12,14 +12,6 @@ import UIKit
 
 class CustomTableView: UITableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-    }
 
     @IBInspectable var bgFileName: String = "" {
         didSet {

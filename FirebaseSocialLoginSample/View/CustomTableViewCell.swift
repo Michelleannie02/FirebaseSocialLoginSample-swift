@@ -12,16 +12,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
 
-        super.init(coder: aDecoder)
-
-        setupView()
-    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
